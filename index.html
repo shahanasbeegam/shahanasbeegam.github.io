@@ -1,90 +1,1024 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shahanas Beegam - Data Analyst</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    header {
-      text-align: center;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    p {
-      line-height: 1.6;
-    }
-    .project {
-      margin-bottom: 20px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Educator & Data Analytics Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f3f2ef;
+        }
+        
+        /* LinkedIn-style Header */
+        .header-wrapper {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .cover-photo {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: flex-end;
+            gap: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-top: -90px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            background: white;
+            flex-shrink: 0;
+        }
+        
+        .profile-info {
+            flex-grow: 1;
+            padding-bottom: 1rem;
+        }
+        
+        .profile-info h1 {
+            font-size: 2rem;
+            color: #000;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        
+        .profile-info .tagline {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-info .location {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a66c2;
+            color: white;
+            padding: 0.65rem 1.5rem;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #004182;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #0a66c2;
+            border: 1px solid #0a66c2;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(10, 102, 194, 0.08);
+            border-color: #004182;
+            color: #004182;
+        }
+        
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #000;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .credential-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0a66c2;
+        }
+        
+        .credential-card h3 {
+            color: #000;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .timeline-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .timeline-header h3 {
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .timeline-date {
+            color: #666;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .timeline-org {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0.3rem 0 0.5rem 0;
+        }
+        
+        .timeline-desc {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0.5rem 0 0 0;
+        }
+        
+        .research-list {
+            margin-top: 1.5rem;
+        }
+        
+        .research-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .research-item:last-child {
+            border-bottom: none;
+        }
+        
+        .research-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .research-header h3 {
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .blog-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-date {
+            display: block;
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-content h3 {
+            color: #000;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .blog-content p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-link {
+            color: #0a66c2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .blog-link:hover {
+            color: #004182;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .expertise-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 3px solid #0a66c2;
+        }
+        
+        .expertise-card h3 {
+            color: #000;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .expertise-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .expertise-card li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+        }
+        
+        .expertise-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0a66c2;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .tool-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .tool-card:hover {
+            border-color: #0a66c2;
+            box-shadow: 0 2px 8px rgba(10, 102, 194, 0.15);
+        }
+        
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-card h4 {
+            color: #000;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .tool-card p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .role-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0a66c2;
+        }
+        
+        .role-category h3 {
+            color: #000;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .role-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .role-category li {
+            padding: 0.4rem 0;
+            color: #666;
+        }
+        
+        .work-samples, .projects-samples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .sample-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+        
+        .sample-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .sample-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .sample-content {
+            padding: 1.5rem;
+        }
+        
+        .sample-content h3 {
+            color: #000;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .sample-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .sample-status {
+            display: inline-block;
+            background: #e7f3ff;
+            color: #0a66c2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #0a66c2;
+            color: white;
+            padding: 0.6rem 1.3rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #004182;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: #0a66c2;
+        }
+        
+        .cta-section .btn:hover {
+            background: #f3f2ef;
+        }
+        
+        .footer {
+            background: white;
+            color: #666;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        @media (max-width: 768px) {
+            .cover-photo {
+                height: 200px;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-photo {
+                margin-top: -90px;
+            }
+            
+            .profile-info h1 {
+                font-size: 1.5rem;
+            }
+            
+
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .header-buttons {
+                justify-content: center;
+            }
+            
+            .btn {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
+
+
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="https://picsum.photos/200" alt="Shahanas Beegam">
-      <h1>Shahanas Beegam</h1>
-      <p>Data Analyst</p>
-      <p>India</p>
-    </header>
-    <hr>
-    <section>
-      <h2>About Me</h2>
-      <p>I am a passionate data analyst with a strong background in statistics and data visualization. I have experience working with various tools and technologies to derive insights from data and drive business decisions.</p>
-    </section>
-    <hr>
-    <section>
-      <h2>Education</h2>
-      <p><strong>Bachelor of Science in Statistics</strong><br> University of XYZ, India<br> Graduated: May 20XX</p>
-    </section>
-    <hr>
-    <section>
-      <h2>Experience</h2>
-      <p><strong>Data Analyst Intern</strong><br> ABC Company, India<br> June 20XX - August 20XX</p>
-      <ul>
-        <li>Analyzed sales data to identify trends and opportunities for improvement</li>
-        <li>Created interactive dashboards using Tableau for executive reporting</li>
-        <li>Assisted in developing predictive models to forecast sales</li>
-      </ul>
-    </section>
-    <hr>
-    <section>
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Sales Forecasting Dashboard</h3>
-        <img src="https://picsum.photos/400/200" alt="Sales Forecasting Dashboard">
-        <p>An interactive dashboard built using Tableau to visualize sales data and predict future sales trends.</p>
-      </div>
-      <div class="project">
-        <h3>Customer Segmentation Analysis</h3>
-        <img src="https://picsum.photos/400/200" alt="Customer Segmentation Analysis">
-        <p>Performed clustering analysis on customer data to identify distinct segments for targeted marketing campaigns.</p>
-      </div>
-      <!-- Add more projects as needed -->
-    </section>
-    <hr>
-    <footer>
-      <p>Contact: shahanas@example.com | Phone: +91 1234567890</p>
+    <!-- LinkedIn-style Header -->
+    <div class="header-wrapper">
+        <img src="cover.jpg" alt="Cover Photo" class="cover-photo">
+        
+        <div class="header-content">
+            <div class="profile-section">
+                <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+                
+                <div class="profile-info">
+                    <h1>Shahanas Beegam P</h1>
+                    <p class="tagline">STEM Educator • Data Analyst • Educational Technology Specialist</p>
+                    <p class="location">📍 Pattambi, Kerala, India</p>
+                    
+                    <div class="header-buttons">
+                        <a href="#portfolio" class="btn">👁️ View Portfolio</a>
+                        <a href="Shahanas_Beegam P_CV_2026.pdf" download class="btn">📄 Download CV</a>
+                        <a href="https://www.linkedin.com/in/shahanas-beegam" target="_blank" class="btn">💼 Connect on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>I'm an interdisciplinary professional with a unique blend of expertise in STEM education, data analytics, and educational technology. My background spans chemistry and physics teaching, coding education, robotics instruction, and hands-on data analytics work.</p>
+        </section>
+        
+        <section id="experience" class="section">
+            <h2>💼 Experience</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>STEM Educator & Program Coordinator</h3>
+                    <span class="timeline-date">2020 - Present</span>
+                </div>
+                <p class="timeline-org">Organization Name</p>
+                <p class="timeline-desc">Teaching Chemistry, Physics, Coding, AI, Robotics, and ICT programs. Curriculum design and delivery of hands-on STEM learning experiences.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Data Analytics Intern</h3>
+                    <span class="timeline-date">2023 - 2024</span>
+                </div>
+                <p class="timeline-org">Organization Name</p>
+                <p class="timeline-desc">Data cleaning, analysis, visualization using Excel and Power BI. Created dashboards and reports for data-driven insights.</p>
+            </div>
+        </section>
+        
+        <section id="education" class="section">
+            <h2>🎓 Education</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Work Integrated Master of Computer Applications (MCA)</h3>
+                    <span class="timeline-date">2023 - Present</span>
+                </div>
+                <p class="timeline-org">Amity University Online</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Bachelor of Education (B.Ed.) - Physical Science</h3>
+                    <span class="timeline-date">2021-2023</span>
+                </div>
+                <p class="timeline-org">Calicut University</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Postgraduate Degree in Chemistry</h3>
+                    <span class="timeline-date">2017-2019</span>
+                </div>
+                <p class="timeline-org"> Calicut University</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Graduation in Chemistry</h3>
+                    <span class="timeline-date">2014-2017</span>
+                </div>
+                <p class="timeline-org"> Calicut University</p>
+            </div>
+        </section>
+        
+        <section id="certifications" class="section">
+            <h2>✅ Certifications</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>State Eligibility Test (SET)</h3>
+                    <span class="timeline-date">2025</span>
+                </div>
+                <p class="timeline-org">Government of Kerala</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Kerala Teacher Eligibility Test (KTET)</h3>
+                    <span class="timeline-date">2023</span>
+                </div>
+                <p class="timeline-org">Government of Kerala</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Central Teacher Eligibility Test (CTET)</h3>
+                    <span class="timeline-date">2023</span>
+                </div>
+                <p class="timeline-org">CBSE</p>
+            </div>
+             <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Cambridge Teaching Standards & International
+Pedagogy</h3>
+                    <span class="timeline-date">2025</span>
+                </div>
+                <p class="timeline-org">Up Educators</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Teaching in the 21st Century</h3>
+                    <span class="timeline-date">2025</span>
+                </div>
+                <p class="timeline-org"> Centre for Advanced
+Learning,Manav Rachna University</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>STEM Education: What It Is and What It Is Not </h3>
+                    <span class="timeline-date">2025</span>
+                </div>
+                <p class="timeline-org">Sharjah
+Education Academy</p>
+            </div>
+        </section>
+        
+        <section id="expertise" class="section">
+            <h2>Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>🎓 STEM Education</h3>
+                    <ul>
+                        <li>Teaching Chemistry and Physics</li>
+                        <li>Curriculum design and learning outcome mapping</li>
+                        <li>Assessment creation and evaluation</li>
+                        <li>Hands-on STEM and robotics activities</li>
+                        <li>Coding and programming instruction</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <h3>📊 Data Analytics</h3>
+                    <ul>
+                        <li>Data cleaning and preparation</li>
+                        <li>Excel and Power BI dashboards</li>
+                        <li>Data interpretation and reporting</li>
+                        <li>Basic Python for data handling</li>
+                        <li>Insight generation and visualization</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <h3>🤖 AI & Educational Technology</h3>
+                    <ul>
+                        <li>AI prompt creation for educational content</li>
+                        <li>Reviewing and validating AI-generated outputs</li>
+                        <li>Technology-enabled teaching workflows</li>
+                        <li>AI applications in education and research</li>
+                        <li>EdTech integration and implementation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tools" class="section">
+            <h2>Tools & Technologies</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h4>Microsoft Excel</h4>
+                    <p>Data cleaning, structured reports, academic analysis</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📈</div>
+                    <h4>Power BI</h4>
+                    <p>Interactive dashboards, data visualization, insights</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🐍</div>
+                    <h4>Python</h4>
+                    <p>Data handling, problem-solving, analytics automation</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🤖</div>
+                    <h4>ChatGPT</h4>
+                    <p>Content creation, prompt engineering, AI validation</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🎨</div>
+                    <h4>Canva</h4>
+                    <p>Worksheets, presentations, educational materials</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <h4>Google Workspace</h4>
+                    <p>Documentation, collaboration, data management</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">⚡</div>
+                    <h4>Arduino</h4>
+                    <p>STEM projects, robotics, sensor-based learning</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">💻</div>
+                    <h4>HTML Basics</h4>
+                    <p>Web structuring, portfolio sites, EdTech platforms</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="roles" class="section">
+            <h2>Open to Opportunities</h2>
+            <p style="margin-bottom: 1.5rem; color: #666;">I'm open to remote, hybrid, and on-site opportunities that leverage my interdisciplinary expertise in education, data, and technology.</p>
+            
+            <div class="roles-grid">
+                <div class="role-category">
+                    <h3>🎓 Education & STEM</h3>
+                    <ul>
+                        <li>STEM Educator / Instructor</li>
+                        <li>Chemistry & Physics Faculty</li>
+                        <li>Curriculum Developer</li>
+                        <li>Academic Content Developer</li>
+                        <li>Educational Program Coordinator</li>
+                    </ul>
+                </div>
+                
+                <div class="role-category">
+                    <h3>📊 Data & Analytics</h3>
+                    <ul>
+                        <li>Data Analytics Intern</li>
+                        <li>Junior Data Analyst</li>
+                        <li>Data Analyst (Education-focused)</li>
+                        <li>Data & Reporting Executive</li>
+                    </ul>
+                </div>
+                
+                <div class="role-category">
+                    <h3>🤖 AI & EdTech</h3>
+                    <ul>
+                        <li>AI Content Reviewer / Validator</li>
+                        <li>AI Training Support Specialist</li>
+                        <li>Educational Technology Specialist</li>
+                        <li>Research Assistant</li>
+                        <li>Academic Support Roles</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portfolio" class="section">
+            <h2>Portfolio</h2>
+            <div class="work-samples">
+                <div class="sample-card">
+                    <div class="sample-image">
+                        <!-- Replace with actual image: <img src="samples/lesson-plan.jpg" alt="Lesson Plans" class="sample-image"> -->
+                        📝
+                    </div>
+                    <div class="sample-content">
+                        <h3>Lesson Plans & Worksheets</h3>
+                        <p>Structured lesson plans for Chemistry, Physics, Coding, and integrated STEM learning with clear outcomes and assessments</p>
+                        <a href="samples/pH Scale.pdf" download class="download-btn">⬇ Download Sample</a>
+                    </div>
+                </div>
+                
+                <div class="sample-card">
+                    <div class="sample-image">
+                        <!-- Replace with actual image: <img src="samples/robotics.jpg" alt="Robotics Projects" class="sample-image"> -->
+                        🤖
+                    </div>
+                    <div class="sample-content">
+                        <h3>STEM & Robotics Projects</h3>
+                        <p>Activity guides and documentation for hands-on experiments, problem-solving tasks, and technology integration</p>
+                        <a href="samples/Balloon_Powered_Car.pdf" download class="download-btn">⬇ Download Sample</a>
+                    </div>
+                </div>
+                
+                <div class="sample-card">
+                    <div class="sample-image">
+                        <!-- Replace with actual image: <img src="samples/dashboard.jpg" alt="Data Dashboard" class="sample-image"> -->
+                        📊
+                    </div>
+                    <div class="sample-content">
+                        <h3>Data Analytics Reports</h3>
+                        <p>Dashboards and reports showcasing data cleaning, analysis, visualization, and insights using Excel and Power BI</p>
+                        <a href="https://drive.google.com/drive/folders/1VkI7LqXN8j3kuaaSbg3ycNz-jgcOyuqn?usp=sharing" download class="download-btn">⬇ Download Sample</a>
+                    </div>
+                </div>
+                
+                <div class="sample-card">
+                    <div class="sample-image">
+                        <!-- Replace with actual image: <img src="samples/ai-content.jpg" alt="AI Content" class="sample-image"> -->
+                        🤖
+                    </div>
+                    <div class="sample-content">
+                        <h3>AI-Assisted Content</h3>
+                        <p>Educational content created and enhanced using AI tools, including prompt engineering and content validation</p>
+                        <a href="samples/ai-content.pdf" download class="download-btn">⬇ Download Sample</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="research" class="section">
+            <h2>Research Papers</h2>
+            <div class="research-list">
+                <div class="research-item">
+                    <div class="research-header">
+                        <h3>ROLE OF AI IN ENHANCING STEM EDUCATIONAL CONTENT AND LEARNING EXPERIENCE</h3>
+                        <span class="timeline-date">2025</span>
+                    </div>
+                    <p class="timeline-org">Journal Name / Conference Name</p>
+                    <p class="timeline-desc">Brief description of the research paper, methodology, and key findings. This explores the integration of AI tools in STEM education.</p>
+                    <a href="papers/Final_ROLE OF AI IN ENHANCING STEM EDUCATIONAL CONTENT AND LEARNING EXPERIENCE.pdf" download class="download-btn" style="margin-top: 0.5rem;">📄 Download Paper</a>
+                </div>
+                <!--
+
+                <div class="research-item">
+                    <div class="research-header">
+                        <h3>Title of Research Paper on Data Analytics in Education</h3>
+                        <span class="timeline-date">2023</span>
+                    </div>
+                    <p class="timeline-org">Journal Name / Conference Name</p>
+                    <p class="timeline-desc">Brief description of the research paper, methodology, and key findings. This paper examines data-driven approaches to educational improvement.</p>
+                    <a href="papers/paper2.pdf" download class="download-btn" style="margin-top: 0.5rem;">📄 Download Paper</a>
+                </div>
+            </div>
+        </section>
+        -->
+        <section id="blog" class="section" style="display:none;">
+            <h2>Latest from Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <!-- Replace with actual image: <img src="blog/post1.jpg" alt="Blog Post" class="blog-image"> -->
+                        📝
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 15, 2024</span>
+                        <h3>How AI is Transforming STEM Education</h3>
+                        <p>Exploring the latest trends in artificial intelligence and their practical applications in science, technology, engineering, and mathematics education...</p>
+                        <a href="/blog/ai-stem-education" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        📊
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 10, 2024</span>
+                        <h3>Data Analytics Tools Every Educator Should Know</h3>
+                        <p>A comprehensive guide to essential data analytics tools and techniques that can help educators make data-driven decisions in the classroom...</p>
+                        <a href="/blog/data-analytics-educators" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        🤖
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 5, 2024</span>
+                        <h3>Building Hands-On Robotics Projects for Students</h3>
+                        <p>Step-by-step guide to creating engaging robotics projects that combine electronics, programming, and physical science concepts...</p>
+                        <a href="/blog/robotics-projects" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        ⚗️
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">November 28, 2024</span>
+                        <h3>Integrating Chemistry and Physics with AI</h3>
+                        <p>Discovering the connections between traditional science subjects and modern artificial intelligence applications in research and education...</p>
+                        <a href="/blog/chemistry-physics-ai" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="/blog" class="btn">📚 View All Blog Posts</a>
+            </div>
+        </section>
+        
+        <section id="projects" class="section">
+            <h2>Current Projects</h2>
+            <div class="projects-samples">
+                <div class="sample-card">
+                    <div class="sample-image">
+                        <!-- Replace with actual image: <img src="projects/book.jpg" alt="Physical AI Book" class="sample-image"> -->
+                        📚
+                    </div>
+                    <div class="sample-content">
+                        <span class="sample-status">🚀 In Progress</span>
+                        <h3>Physical AI: Bridging Science & Technology</h3>
+                        <p>Authoring a comprehensive book that explores the intersection of Physics, Chemistry, Artificial Intelligence, and Electronics. This work demonstrates how fundamental scientific principles integrate with modern AI systems and electronic applications.</p>
+                        <a href="projects/book-preview.pdf" download class="download-btn">⬇ View Preview</a>
+                    </div>
+                </div>
+                
+                <div class="sample-card">
+                    <div class="sample-image">
+                        <!-- Replace with actual image: <img src="projects/website.jpg" alt="STEMeducatorshub" class="sample-image"> -->
+                        🌐
+                    </div>
+                    <div class="sample-content">
+                        <span class="sample-status">🔨 Under Development</span>
+                        <h3>STEMeducatorshub.org</h3>
+                        <p>Developing a dedicated platform for STEM educators featuring curated activity guides, lesson plans, and hands-on project resources for teachers. The platform also serves as a job board connecting STEM education professionals with opportunities.</p>
+                        <a href="https://stemeducatorshub.org" target="_blank" class="download-btn">🔗 Visit Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="contact" class="cta-section">
+            <h2>Let's Connect</h2>
+            <p>Interested in collaborating or learning more about my work?</p>
+            <a href="mailto:your.email@example.com" class="btn">📧 Get in Touch</a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 STEM Educator & Data Analytics Professional</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Based in Pattambi, Kerala, India</p>
     </footer>
-  </div>
 </body>
 </html>
